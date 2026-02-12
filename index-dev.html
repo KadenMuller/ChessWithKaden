@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chess With Kaden</title>
+  <meta name="description" content="Chess With Kaden — practical chess improvement." />
+
+  <style>
+    :root{
+      --bg:#f4faff;
+      --panel:#ffffff;
+      --accent:#38bdf8;
+      --accent-soft:#e0f2fe;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#dbeafe;
+      --radius:14px;
+      --max: 1000px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.35;
+      z-index:-1;
+      background:
+        linear-gradient(45deg, rgba(56,189,248,.08) 25%, transparent 25%) 0 0/44px 44px,
+        linear-gradient(45deg, transparent 75%, rgba(56,189,248,.08) 75%) 0 0/44px 44px,
+        linear-gradient(45deg, rgba(56,189,248,.08) 25%, transparent 25%) 22px 22px/44px 44px,
+        linear-gradient(45deg, transparent 75%, rgba(56,189,248,.08) 75%) 22px 22px/44px 44px;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      padding-bottom:16px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .mark{
+      width:40px;height:40px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#38bdf8,#7dd3fc);
+      display:grid;
+      place-items:center;
+      box-shadow:0 10px 22px rgba(56,189,248,.18);
+      font-size:20px;
+    }
+
+    .brand h1{margin:0;font-size:16px}
+    .brand p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+
+    nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .link{
+      padding:8px 12px;
+      border-radius:10px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .link:hover{
+      background:var(--accent-soft);
+      color:var(--text);
+    }
+
+    .link.primary{
+      background:var(--accent);
+      color:#fff;
+      font-weight:600;
+    }
+
+    .hero{
+      margin-top:24px;
+      padding:20px;
+      border-radius:var(--radius);
+      background:var(--panel);
+      border:1px solid var(--line);
+    }
+
+    .hero h2{
+      margin:0 0 8px;
+      font-size:28px;
+      letter-spacing:-.4px;
+    }
+
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    footer{
+      margin-top:24px;
+      padding-top:14px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    /* ===== COMING SOON OVERLAY ===== */
+
+    #comingSoonOverlay{
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      display:none;
+      padding:24px;
+      background:rgba(244,250,255,.95);
+      backdrop-filter:blur(8px);
+    }
+
+    .cs-card{
+      max-width:750px;
+      margin:8vh auto 0;
+      background:#fff;
+      border:1px solid #dbeafe;
+      border-radius:18px;
+      padding:22px;
+      box-shadow:0 18px 40px rgba(2,132,199,.12);
+      text-align:center;
+    }
+
+    .cs-card h1{
+      margin:12px 0 6px;
+      font-size:36px;
+    }
+
+    .cs-card p{
+      margin:0;
+      color:#475569;
+      line-height:1.7;
+    }
+
+    /* Countdown */
+
+    .countdown{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin:18px 0 8px;
+    }
+
+    .cd-box{
+      width:120px;
+      padding:14px 10px;
+      border-radius:14px;
+      border:1px solid #dbeafe;
+      background:#e0f2fe;
+    }
+
+    .cd-num{
+      font-size:30px;
+      font-weight:900;
+      color:#0f172a;
+    }
+
+    .cd-label{
+      margin-top:4px;
+      font-size:12px;
+      color:#475569;
+      font-weight:700;
+    }
+
+    .launch-note{
+      font-size:13px;
+      color:#64748b;
+      margin-bottom:12px;
+    }
+
+    .cs-btn{
+      display:inline-block;
+      margin-top:10px;
+      padding:12px 18px;
+      border-radius:12px;
+      background:#38bdf8;
+      color:#fff;
+      font-weight:800;
+    }
+
+    .cs-btn:hover{opacity:.92}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <a class="brand" href="index.html">
+        <div class="mark">♞</div>
+        <div>
+          <h1>Chess With Kaden</h1>
+          <p>Follow My Chess Journey</p>
+        </div>
+      </a>
+
+      <nav>
+        <a class="link" href="blog.html">Blog</a>
+        <a class="link" href="course.html">Course</a>
+        <a class="link" href="membership.html">Membership</a>
+        <a class="link" href="rating-progress.html">Rating Progress</a>
+        <a class="link primary" href="https://www.youtube.com/channel/UCrovZcgCHxl1PshHHDUH79w" target="_blank">YouTube</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Play better chess with simple, winning ideas.</h2>
+      <p>
+        Practical improvement focused on real-game decision making,
+        stronger endgames, and confident calculation.
+      </p>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Chess With Kaden</span>
+      <span>Built for practical improvement</span>
+    </footer>
+
+  </div>
+
+  <!-- Coming Soon Overlay -->
+  <div id="comingSoonOverlay">
+    <div class="cs-card">
+      <h1>Coming Soon</h1>
+      <p>
+        The new Chess With Kaden experience launches soon.
+        Follow My Chess Journey.
+      </p>
+
+      <div class="countdown">
+        <div class="cd-box">
+          <div class="cd-num" id="cdDays">0</div>
+          <div class="cd-label">Days</div>
+        </div>
+        <div class="cd-box">
+          <div class="cd-num" id="cdHours">00</div>
+          <div class="cd-label">Hours</div>
+        </div>
+        <div class="cd-box">
+          <div class="cd-num" id="cdMins">00</div>
+          <div class="cd-label">Minutes</div>
+        </div>
+        <div class="cd-box">
+          <div class="cd-num" id="cdSecs">00</div>
+          <div class="cd-label">Seconds</div>
+        </div>
+      </div>
+
+      <div class="launch-note" id="launchNote">
+        Launch date: 23 February 2026 • 18:00 (SAST)
+      </div>
+
+      <a class="cs-btn" href="https://www.youtube.com/channel/UCrovZcgCHxl1PshHHDUH79w" target="_blank">
+        Visit YouTube
+      </a>
+
+      <a class="cs-btn" href="https://www.instagram.com/chess_with_kaden/" target="_blank">
+        Visit Instagram
+      </a>
+
+      <a class="cs-btn" href="https://www.facebook.com/kaden.muller.3/"  target="_blank">
+        Visit Facebook
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const COMING_SOON = true;
+    const preview = new URLSearchParams(location.search).get("preview") === "1";
+    const overlay = document.getElementById("comingSoonOverlay");
+
+    if (COMING_SOON && !preview) overlay.style.display = "block";
+
+    // ===== COUNTDOWN TO 23 FEB 2026 18:00 SAST =====
+    const releaseDate = new Date("2026-02-23T18:00:00+02:00").getTime();
+
+    const dEl = document.getElementById("cdDays");
+    const hEl = document.getElementById("cdHours");
+    const mEl = document.getElementById("cdMins");
+    const sEl = document.getElementById("cdSecs");
+    const noteEl = document.getElementById("launchNote");
+
+    function pad(n){ return String(n).padStart(2,"0"); }
+
+    function updateCountdown(){
+      const now = Date.now();
+      let diff = releaseDate - now;
+
+      if (diff <= 0){
+        dEl.textContent = "0";
+        hEl.textContent = "00";
+        mEl.textContent = "00";
+        sEl.textContent = "00";
+        noteEl.textContent = "Launched ✅";
+        return;
+      }
+
+      const totalSeconds = Math.floor(diff / 1000);
+      const days = Math.floor(totalSeconds / (24 * 3600));
+      const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      dEl.textContent = days;
+      hEl.textContent = pad(hours);
+      mEl.textContent = pad(minutes);
+      sEl.textContent = pad(seconds);
+    }
+
+    if (COMING_SOON && !preview){
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+  </script>
+
+</body>
+</html>
