@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chess With Kaden — My Chess Journey</title>
+  <meta name="description" content="Follow Kaden's chess journey — rating progress, milestones, content and more. Chasing 2000 CSA and 2200 FIDE." />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="favicon_io/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><span class="piece">&#9822;</span> Chess With Kaden</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="social.html">Social</a></li>
+        <li><a href="https://youtube.com/@ChessWithKaden" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Every move counts</span>
+        <h1>My Chess Journey</h1>
+        <p class="lead">A personal record of my growth toward 2000 CSA and 2200 FIDE — games, milestones, and lessons learned along the way.</p>
+        <div class="btn-row">
+          <a href="blog.html" class="btn btn-primary">Read the blog &rarr;</a>
+          <a href="social.html" class="btn btn-ghost">Find me online</a>
+        </div>
+      </div>
+      <img class="hero-avatar" src="Images/chess with kaden yt profle image.jpg" alt="Chess With Kaden" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Current Rating</h2>
+        <p>Where I stand right now, and how far I have to go.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card rating-card">
+          <div class="rating-top">
+            <span class="label">Chess South Africa</span>
+            <span class="score">1717</span>
+          </div>
+          <div class="progress"><span style="width: 85.85%"></span></div>
+          <div class="progress-meta">
+            <span>Goal: 2000</span>
+            <span>86% there</span>
+          </div>
+          <p class="sub" style="margin:.6rem 0 0">283 points to go.</p>
+        </div>
+
+        <div class="card rating-card">
+          <div class="rating-top">
+            <span class="label">FIDE</span>
+            <span class="score">1693</span>
+          </div>
+          <div class="progress"><span style="width: 76.95%"></span></div>
+          <div class="progress-meta">
+            <span>Goal: 2200</span>
+            <span>77% there</span>
+          </div>
+          <p class="sub" style="margin:.6rem 0 0">507 points to go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Milestones</h2>
+        <p>Big moments on the road. More to come as the journey continues.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="tag">Rating</span>
+          <h3 style="margin-top:.7rem">Crossed 1700 CSA</h3>
+          <p style="margin-bottom:0">Broke into the 1700s — a new personal best and the gateway to expert territory.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Content</span>
+          <h3 style="margin-top:.7rem">Launched the channel</h3>
+          <p style="margin-bottom:0">Started sharing games, analysis, and the journey on YouTube and beyond.</p>
+        </div>
+        <div class="card" style="border-style:dashed; box-shadow:none; background:transparent;">
+          <span class="tag" style="background:#eef0f2; color:var(--text-muted)">Coming soon</span>
+          <h3 style="margin-top:.7rem; color:var(--text-muted)">2000 CSA</h3>
+          <p style="margin-bottom:0">The next big target. Follow along on the blog to see how it goes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Chess With Kaden — Every move &copy; 2026</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="social.html">Social</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>

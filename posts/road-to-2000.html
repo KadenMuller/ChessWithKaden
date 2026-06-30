@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Road to 2000 — Chess With Kaden</title>
+  <meta name="description" content="Sitting at 1717 CSA, here's my honest plan to break through to 2000." />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="../favicon_io/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand"><span class="piece">&#9822;</span> Chess With Kaden</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html" class="active">Blog</a></li>
+        <li><a href="../social.html">Social</a></li>
+        <li><a href="https://youtube.com/@ChessWithKaden" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <article class="article">
+    <div class="container">
+      <a href="../blog.html" class="back-link">&larr; Back to blog</a>
+      <h1>The Road to 2000: Where I Am and Where I'm Going</h1>
+      <div class="post-meta">
+        <span class="tag">Journey</span>
+        <span>June 28, 2026</span>
+        <span>&middot; 4 min read</span>
+      </div>
+
+      <p>I'm sitting at 1717 on the Chess South Africa rating list and 1693 FIDE. A few years ago those numbers would have felt unreachable. Now they feel like a plateau — close enough to 2000 to taste it, far enough that I can't just coast there.</p>
+
+      <p>This post is less a victory lap and more an honest status report: what's working, what isn't, and the plan to push through.</p>
+
+      <h2>The first thousand vs. the last few hundred</h2>
+      <p>Getting from beginner to 1700 was mostly about not blundering. Stop hanging pieces, develop your minor pieces, castle, and you climb. The points came fast because my opponents were making the same kinds of mistakes I was learning to avoid.</p>
+
+      <p>The last few hundred points are different. My opponents don't hang pieces. Games are decided by small advantages compounded over many moves — a slightly better pawn structure, a more active rook, one tempo in a sharp line. Climbing now means getting better at the parts of chess I used to ignore.</p>
+
+      <blockquote>Below 1700, you win when your opponent makes a mistake. Above it, you have to make them work for theirs.</blockquote>
+
+      <h2>What's actually holding me back</h2>
+      <p>If I'm honest, three things:</p>
+      <p><strong>Endgames.</strong> I reach plenty of equal or better endgames and convert too few of them. King-and-pawn technique and rook endings are where I leak the most points.</p>
+      <p><strong>Time management.</strong> I spend too long in the opening on positions I already know, then rush the critical middlegame decisions. Classic.</p>
+      <p><strong>Calculation discipline.</strong> I trust my intuition more than I should in sharp positions, instead of slowing down and checking forcing lines.</p>
+
+      <h2>The plan</h2>
+      <p>Nothing exotic — just consistency on the things that matter:</p>
+      <p>Daily tactics to keep calculation sharp, a focused endgame study block twice a week, and full post-game analysis of every classical game I play — without the engine on the first pass, so I'm actually training my own judgment.</p>
+
+      <p>I'll be tracking all of it here. If the plan works, the rating graph on the <a href="../index.html">home page</a> should start moving. If it doesn't, you'll get an honest post about why. That's the deal.</p>
+
+      <p>Thanks for following along.</p>
+
+      <a href="../blog.html" class="back-link" style="margin-top:2rem">&larr; Back to blog</a>
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Chess With Kaden — Every move &copy; 2026</p>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../social.html">Social</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>

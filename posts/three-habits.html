@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Three Habits That Raised My Rating — Chess With Kaden</title>
+  <meta name="description" content="The three unglamorous habits that gave me the biggest rating gains." />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="../favicon_io/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand"><span class="piece">&#9822;</span> Chess With Kaden</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html" class="active">Blog</a></li>
+        <li><a href="../social.html">Social</a></li>
+        <li><a href="https://youtube.com/@ChessWithKaden" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <article class="article">
+    <div class="container">
+      <a href="../blog.html" class="back-link">&larr; Back to blog</a>
+      <h1>Three Habits That Actually Raised My Rating</h1>
+      <div class="post-meta">
+        <span class="tag">Training</span>
+        <span>June 21, 2026</span>
+        <span>&middot; 3 min read</span>
+      </div>
+
+      <p>Everyone wants the shortcut — the one opening, the one course, the one trick that adds 200 points overnight. I chased plenty of those. None of them worked. What actually moved my rating was boring, repeatable, and free. Here are the three habits that did the heavy lifting.</p>
+
+      <h2>1. Analyse every loss before you play again</h2>
+      <p>It's tempting to lose a game and immediately queue up another to "win it back." That's how you lose three more. Now I make a rule: no new game until I've found the move where the last one actually went wrong — and not with the engine first, but with my own eyes.</p>
+      <p>The engine confirms or corrects me afterward. But the act of looking for the mistake myself is what trains judgment. Tilt fades, and the same blunder stops repeating.</p>
+
+      <blockquote>You don't learn from losing. You learn from understanding why you lost.</blockquote>
+
+      <h2>2. A small dose of tactics, every single day</h2>
+      <p>Not marathon sessions. Fifteen to twenty minutes of puzzles, daily, beats a three-hour grind once a week every time. Consistency keeps pattern recognition warm, so in a real game the tactics jump out instead of hiding.</p>
+      <p>The key change: I stopped racing for puzzle rating and started solving slowly, calculating the full line before moving — exactly like I should over the board.</p>
+
+      <h2>3. Pick one opening and go deep</h2>
+      <p>I used to play a different opening every week, chasing novelty. I understood none of them. Now I play a small, stable repertoire and study the resulting middlegames instead of memorising more first moves.</p>
+      <p>Knowing the plans, the typical pawn breaks, and the standard endgames of <em>one</em> structure is worth more than a shallow grasp of ten.</p>
+
+      <h2>The pattern</h2>
+      <p>Notice what these have in common: none is exciting, all are repeatable, and every one is about depth over novelty. That's the whole secret. Progress isn't a trick you discover — it's a habit you keep.</p>
+
+      <p>Want to see whether this is working in real time? The <a href="../index.html">rating tracker</a> on the home page tells the truth either way.</p>
+
+      <a href="../blog.html" class="back-link" style="margin-top:2rem">&larr; Back to blog</a>
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Chess With Kaden — Every move &copy; 2026</p>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../social.html">Social</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>

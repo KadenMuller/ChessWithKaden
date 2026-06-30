@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Media — Chess With Kaden</title>
+  <meta name="description" content="Find Chess With Kaden across the web — YouTube, TikTok, Instagram, X, Chess.com and Lichess." />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="favicon_io/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><span class="piece">&#9822;</span> Chess With Kaden</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="social.html" class="active">Social</a></li>
+        <li><a href="https://www.youtube.com/channel/UCrovZcgCHxl1PshHHDUH79w" target="_blank" rel="noopener">Watch Me Live</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Social Media</h1>
+        <p>Find me across the web — chess content, updates, and games. Come say hi or send a challenge.</p>
+      </div>
+
+      <h2 style="font-size:1.3rem; margin-bottom:1rem;">Video &amp; Content</h2>
+      <div class="grid grid-2" style="margin-bottom:2.5rem;">
+        <a class="card social-card" href="https://www.youtube.com/channel/UCrovZcgCHxl1PshHHDUH79w" target="_blank" rel="noopener">
+          <div class="head"><span class="ico">&#9654;&#65039;</span><h3 style="margin:0">YouTube</h3></div>
+          <p style="margin:.2rem 0 .5rem">Chess games, analysis, and journey vlogs.</p>
+          <span class="handle read-more">youtube.com/@ChessWithKaden &rarr;</span>
+        </a>
+        
+      </div>
+
+      <h2 style="font-size:1.3rem; margin-bottom:1rem;">Social</h2>
+      <div class="grid grid-2" style="margin-bottom:2.5rem;">
+        <a class="card social-card" href="https://instagram.com/ChessWithKaden" target="_blank" rel="noopener">
+          <div class="head"><span class="ico">&#128247;</span><h3 style="margin:0">Instagram</h3></div>
+          <p style="margin:.2rem 0 .5rem">Photos, game highlights, and behind the scenes.</p>
+          <span class="handle read-more">instagram.com/ChessWithKaden &rarr;</span>
+        </a>
+       <a class="card social-card" href="https://tiktok.com/@ChessWithKaden" target="_blank" rel="noopener">
+          <div class="head"><span class="ico">&#127925;</span><h3 style="margin:0">TikTok</h3></div>
+          <p style="margin:.2rem 0 .5rem">Short-form chess tips and highlights.</p>
+          <span class="handle read-more">tiktok.com/@ChessWithKaden &rarr;</span>
+        </a>
+      </div>
+
+      <h2 style="font-size:1.3rem; margin-bottom:1rem;">Play Me</h2>
+      <div class="grid grid-2">
+        <a class="card social-card" href="https://chess.com/member/ChessWithKaden" target="_blank" rel="noopener">
+          <div class="head"><span class="ico">&#9817;</span><h3 style="margin:0">Chess.com</h3></div>
+          <p style="margin:.2rem 0 .5rem">Send a challenge or follow my games live.</p>
+          <span class="handle read-more">chess.com/member/ChessWithKaden &rarr;</span>
+        </a>
+        <a class="card social-card" href="https://lichess.org/@/ChessWithKaden" target="_blank" rel="noopener">
+          <div class="head"><span class="ico">&#9819;</span><h3 style="margin:0">Lichess</h3></div>
+          <p style="margin:.2rem 0 .5rem">Free, open-source chess — come play!</p>
+          <span class="handle read-more">lichess.org/@/ChessWithKaden &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Chess With Kaden — Every move &copy; 2026</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="social.html">Social</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>

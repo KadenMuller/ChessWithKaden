@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Chess With Kaden</title>
+  <meta name="description" content="Chess With Kaden's blog — game analysis, training notes, and reflections on the road to 2000." />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="favicon_io/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><span class="piece">&#9822;</span> Chess With Kaden</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="social.html">Social</a></li>
+        <li><a href="https://youtube.com/@ChessWithKaden" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>The Blog</h1>
+        <p>Game analysis, training notes, and honest reflections from the road to 2000. New posts as the journey unfolds.</p>
+      </div>
+
+      <div class="grid grid-2">
+
+        <a class="card post-card" href="posts/road-to-2000.html">
+          <div class="post-meta">
+            <span class="tag">Journey</span>
+            <span>June 28, 2026</span>
+            <span>&middot; 4 min read</span>
+          </div>
+          <h3 style="margin-top:.7rem">The Road to 2000: Where I Am and Where I'm Going</h3>
+          <p class="excerpt">Sitting at 1717 CSA, the last few hundred points feel different from the first thousand. Here's my honest take on what's working, what isn't, and the plan to break through.</p>
+          <span class="read-more">Read post &rarr;</span>
+        </a>
+
+        <a class="card post-card" href="posts/three-habits.html">
+          <div class="post-meta">
+            <span class="tag">Training</span>
+            <span>June 21, 2026</span>
+            <span>&middot; 3 min read</span>
+          </div>
+          <h3 style="margin-top:.7rem">Three Habits That Actually Raised My Rating</h3>
+          <p class="excerpt">Forget the gimmicks. The biggest jumps in my play came from three unglamorous habits I do almost every day — and none of them is "watch more videos."</p>
+          <span class="read-more">Read post &rarr;</span>
+        </a>
+
+      </div>
+
+      <p style="margin-top:2rem; color:var(--text-muted); font-size:.95rem;">
+        More posts coming soon. Want to be notified? Follow along on
+        <a href="social.html">my socials</a>.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Chess With Kaden — Every move &copy; 2026</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="social.html">Social</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
